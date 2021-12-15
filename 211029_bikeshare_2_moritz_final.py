@@ -20,11 +20,7 @@ def get_filters():
     while True:
         print('\n')
         city = input('Please tell me the city you would like to receive bikeshare statistics on (Chicago, New York City, Washington): ').lower()
-        if city == 'chicago':
-            break
-        elif city == 'new york city':
-            break
-        elif city == 'washington':
+        if city in ['chicago','new york city','washington']:
             break
         else:
             print('\n')
@@ -34,19 +30,7 @@ def get_filters():
     while True:
         print('\n')
         month = input('Now, please tell me the month you would like to receive bikeshare statistics from (all, January, February, ... , June): ').lower()
-        if month == 'all':
-            break
-        elif month == 'january':
-            break
-        elif month == 'february':
-            break
-        elif month == 'march':
-            break
-        elif month == 'april':
-            break
-        elif month == 'may':
-            break
-        elif month == 'june':
+        if month in ['all','january','february','march','april','may','june']:
             break
         else:
             print('\n')
@@ -135,9 +119,9 @@ def time_stats(df):
 
 
     # Display the most common day of week and the corresponding count
-    popular_dow = df['day_of_week'].mode()[0]
-    popular_dow_count = (df['day_of_week'] == popular_dow).sum()
-    print('The most common day of week is: {} (Count: {})\n'.format(popular_dow, popular_dow_count))
+    popular_day_of_week = df['day_of_week'].mode()[0]
+    popular_dow_count = (df['day_of_week'] == popular_day_of_week).sum()
+    print('The most common day of week is: {} (Count: {})\n'.format(popular_day_of_week, popular_dow_count))
 
     # Display the most common start hour and the corresponding count
     df['hour'] = df['Start Time'].dt.hour
