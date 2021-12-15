@@ -23,4 +23,5 @@ chicago.csv
 washington.csv
 
 ### Credits
-https://classroom.udacity.com
+https://classroom.udacity.com  
+https://www.motivateco.com/
