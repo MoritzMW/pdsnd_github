@@ -20,11 +20,7 @@ def get_filters():
     while True:
         print('\n')
         city = input('Please tell me the city you would like to receive bikeshare statistics on (Chicago, New York City, Washington): ').lower()
-        if city == 'chicago':
-            break
-        elif city == 'new york city':
-            break
-        elif city == 'washington':
+        if city in ['chicago','new york city','washington']:
             break
         else:
             print('\n')
