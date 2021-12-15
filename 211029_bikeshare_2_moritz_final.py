@@ -119,9 +119,9 @@ def time_stats(df):
 
 
     # Display the most common day of week and the corresponding count
-    popular_dow = df['day_of_week'].mode()[0]
-    popular_dow_count = (df['day_of_week'] == popular_dow).sum()
-    print('The most common day of week is: {} (Count: {})\n'.format(popular_dow, popular_dow_count))
+    popular_day_of_week = df['day_of_week'].mode()[0]
+    popular_dow_count = (df['day_of_week'] == popular_day_of_week).sum()
+    print('The most common day of week is: {} (Count: {})\n'.format(popular_day_of_week, popular_dow_count))
 
     # Display the most common start hour and the corresponding count
     df['hour'] = df['Start Time'].dt.hour
