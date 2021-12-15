@@ -30,19 +30,7 @@ def get_filters():
     while True:
         print('\n')
         month = input('Now, please tell me the month you would like to receive bikeshare statistics from (all, January, February, ... , June): ').lower()
-        if month == 'all':
-            break
-        elif month == 'january':
-            break
-        elif month == 'february':
-            break
-        elif month == 'march':
-            break
-        elif month == 'april':
-            break
-        elif month == 'may':
-            break
-        elif month == 'june':
+        if month in ['all','january','february','march','april','may','june']:
             break
         else:
             print('\n')
